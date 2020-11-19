@@ -13,6 +13,7 @@ def get_status():
         request_json = request.json        
         dev_url = request_json.get('url')
         status = urlcheck.get_status(dev_url)
+        print(dev_url, status)
         answer = {'status': status}
         return jsonify(answer)
 
