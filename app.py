@@ -9,12 +9,8 @@ def hello_world():
 
 @app.route('/getstatus', methods=['POST'])
 def get_status():
-    if request.method == 'POST':
-        print("Request:")
-        print(request)
-        request_json = request.json
-        print("Request JSON:")
-        print(request_json)
+    if request.method == 'POST':        
+        request_json = request.json        
         dev_url = request_json.get('url')
         status = urlcheck.get_status(dev_url)
         answer = {'status': status}
