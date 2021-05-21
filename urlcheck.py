@@ -11,6 +11,6 @@ testurl = 'https://www.mccarthyandstone.co.uk/retirement-properties-for-sale/bal
 def get_status(url):
     page = requests.get(url)
     soup = BeautifulSoup(page.content, 'html.parser')
-    stage = soup.find('div', class_='cta-block-stage__title')
+    stage = soup.find('div', class_='cta-block-header__group')
 
     return stage.get_text()
