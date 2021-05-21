@@ -1,5 +1,6 @@
 
 #div class="cta-block-stage__title"
+#'cta-block-header__group' - new status selector
 
 
 import requests
