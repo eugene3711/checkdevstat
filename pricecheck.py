@@ -10,4 +10,3 @@ def get_status(url):
     price = int(price.get_text()[1:-3].replace(',',''))
     return price
 
-print(get_status(testurl))
